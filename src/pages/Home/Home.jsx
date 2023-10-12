@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 
 import { getTrendingMovies } from "api";
 import { MovieList } from "components/MovieList/MovieList";
+import { Title } from "./Home.styled";
 
 
 
@@ -15,7 +16,7 @@ export default function Home() {
 
     return (
         <div>
-            <h1>Trending This Week</h1>
+            <Title>Trending This Week</Title>
            <MovieList movies={movies}></MovieList>
         </div>
     )
