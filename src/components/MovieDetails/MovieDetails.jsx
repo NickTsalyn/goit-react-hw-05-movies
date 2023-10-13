@@ -21,17 +21,19 @@ export const MovieDetails = () => {
 
   return (
     <>
-    <BackLink to={backLink}>← Go back</BackLink>
+      <BackLink to={backLink}>← Go back</BackLink>
       <MovieCard movies={movieDetails} />
       <Container>
-        <AddInfo to={'cast'} state={{from: backLink}}>
+        <AddInfo to={'cast'} state={{ from: backLink }}>
           Cast
         </AddInfo>
-        <AddInfo to={'reviews'} state={{from: backLink}}>Review</AddInfo>
+        <AddInfo to={'reviews'} state={{ from: backLink }}>
+          Review
+        </AddInfo>
       </Container>
 
       <Suspense>
-        <Outlet/>
+        <Outlet />
       </Suspense>
     </>
   );
