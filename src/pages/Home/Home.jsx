@@ -11,7 +11,6 @@ export default function Home() {
 
     useEffect(() => {
         getTrendingMovies().then(setMovies)
-        console.log(movies)
     }, [movies])
 
     return (

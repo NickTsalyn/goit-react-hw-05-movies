@@ -4,7 +4,7 @@ import { getMovieName } from 'api';
 import { SearchBox } from 'components/SearchBox/SearchBox';
 import { MovieList } from 'components/MovieList/MovieList';
 
-export  default function  Movies () {
+export  const Movies = () => {
   const [movies, setMovies] = useState([]);
   const [query, setQuery] = useState('');
   const [searchParams, setSearchParams] = useSearchParams();
