@@ -7,6 +7,7 @@ import { Layout } from './Layout/Layout';
 import { MovieCast } from './MovieCast/MovieCast';
 import { MovieReview } from './MovieReview/MovieReview';
 import { NavBar } from './NavBar/NavBar';
+import { PageNotFound } from 'Error/PageNotFound';
 
 // const Movies = lazy(() =>
 //   import('../pages/Movies/Movies')
@@ -32,6 +33,7 @@ export const App = () => {
       <NavBar/>
       <Routes>
         <Route path="/" element={<Layout />}>
+        <Route path="*" element={<PageNotFound />}></Route>
           <Route index element={<Home />} />
           <Route path="/movies" element={<Movies />} />
           <Route path="/movies/:movieId" element={<MovieDetails />}>
