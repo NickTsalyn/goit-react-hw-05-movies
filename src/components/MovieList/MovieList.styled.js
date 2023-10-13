@@ -12,11 +12,14 @@ export const MovieListStyle = styled.ul`
 export const MovieItem = styled.li`
   flex-basis: calc((100% - 100px) / 5);
   max-height: 100%;
-  min-height: 390px;
+  min-height: auto;
   border-radius: 8px;
   overflow: hidden;
   background-color: var(--bg);
   box-shadow: var(--main-shadow);
+  @media only screen and (min-width: 768px) {
+     min-height: 390px;
+  }
 `;
 
 export const MovieLink = styled(Link)`
@@ -46,6 +49,11 @@ export const MovieName = styled.p`
   height: 100%;
   padding: 10px 8px;
   font-weight: 500;
-  font-size: 18px;
+  margin: 0;
+  font-size: 8px;
+  text-align: center;
   transition: all 200ms ease-in-out;
+  @media only screen and (min-width: 768px) {
+     font-size: 18px
+  }
 `;

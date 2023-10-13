@@ -9,7 +9,7 @@ import {
 } from './MovieCard.styled';
 
 export const MovieCard = ({ movies }) => {
-    
+
   const { poster_path, title, release_date, vote_average, overview, genres } =
     movies;
   const genresList = genres.map(genre => genre.name).join(', ');
@@ -19,7 +19,7 @@ export const MovieCard = ({ movies }) => {
 
   return (
     <Container>
-      <Img src={imgUrl} alt={title} width="350" />
+      <Img src={imgUrl} alt={title} />
       <Wrapper>
         <Title>
           {title} <Year>({releaseDate})</Year>
