@@ -8,10 +8,7 @@ import { Layout } from './Layout/Layout';
 // import { MovieReview } from './MovieReview/MovieReview';
 
 const Movies = lazy(() =>
-  import('../pages/Movies/Movies').then(module => ({
-    ...module,
-    default: module.Movies,
-  }))
+  import('../pages/Movies/Movies')
 );
 
 const MovieCast = lazy(() =>
