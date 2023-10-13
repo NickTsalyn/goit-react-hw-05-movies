@@ -24,10 +24,10 @@ export const MovieDetails = () => {
       <BackLink to={backLink}>← Go back</BackLink>
       <MovieCard movies={movieDetails} />
       <Container>
-        <AddInfo to={'/movies/:movieId/cast'} state={{ from: backLink }}>
+        <AddInfo to={'cast'} state={{ from: backLink }}>
           Cast
         </AddInfo>
-        <AddInfo to={'/movies/:movieId/reviews'} state={{ from: backLink }}>
+        <AddInfo to={'reviews'} state={{ from: backLink }}>
           Review
         </AddInfo>
       </Container>
