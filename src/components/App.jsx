@@ -1,31 +1,31 @@
 import { Route, Routes } from 'react-router-dom';
-// import { lazy } from 'react';
+import { lazy } from 'react';
 import Home from 'pages/Home/Home';
-import { Movies } from 'pages/Movies/Movies';
+// import { Movies } from 'pages/Movies/Movies';
 import { MovieDetails } from './MovieDetails/MovieDetails';
 import { Layout } from './Layout/Layout';
-import { MovieCast } from './MovieCast/MovieCast';
-import { MovieReview } from './MovieReview/MovieReview';
+// import { MovieCast } from './MovieCast/MovieCast';
+// import { MovieReview } from './MovieReview/MovieReview';
 import { NavBar } from './NavBar/NavBar';
 import { PageNotFound } from 'Error/PageNotFound';
 
-// const Movies = lazy(() =>
-//   import('../pages/Movies/Movies')
-// );
+const Movies = lazy(() =>
+  import('../pages/Movies/Movies')
+);
 
-// const MovieCast = lazy(() =>
-//   import('./MovieCast/MovieCast').then(module => ({
-//     ...module,
-//     default: module.MovieCast,
-//   }))
-// );
+const MovieCast = lazy(() =>
+  import('./MovieCast/MovieCast').then(module => ({
+    ...module,
+    default: module.MovieCast,
+  }))
+);
 
-// const MovieReview = lazy(() =>
-//   import('./MovieReview/MovieReview').then(module => ({
-//     ...module,
-//     default: module.MovieReview,
-//   }))
-// );
+const MovieReview = lazy(() =>
+  import('./MovieReview/MovieReview').then(module => ({
+    ...module,
+    default: module.MovieReview,
+  }))
+);
 
 export const App = () => {
   return (
