@@ -7,25 +7,11 @@ import { Layout } from './Layout/Layout';
 // import { MovieCast } from './MovieCast/MovieCast';
 // import { MovieReview } from './MovieReview/MovieReview';
 
-const Movies = lazy(() =>
-  import('../pages/Movies/Movies').then(module => ({
-    ...module,
-    default: module.Movies,
-  }))
-);
+const Movies = lazy(() => import('../pages/Movies/Movies'));
 
-const MovieCast = lazy(() =>
-  import('./MovieCast/MovieCast').then(module => ({
-    ...module,
-    default: module.MovieCast
-  }))
-);
+const MovieCast = lazy(() => import('./MovieCast/MovieCast'));
 
-const MovieReview = lazy(() => 
-import('./MovieReview/MovieReview').then(module => ({
-  ...module,
-  default: module.MovieReview
-})))
+const MovieReview = lazy(() => import('./MovieReview/MovieReview'));
 
 export const App = () => {
   return (
