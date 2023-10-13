@@ -15,14 +15,14 @@ const Movies = lazy(() =>
 );
 
 const MovieCast = lazy(() =>
-  import('../components/MovieCast/MovieCast').then(module => ({
+  import('./MovieCast/MovieCast').then(module => ({
     ...module,
     default: module.MovieCast
   }))
 );
 
 const MovieReview = lazy(() => 
-import('../components/MovieReview/MovieReview').then(module => ({
+import('./MovieReview/MovieReview').then(module => ({
   ...module,
   default: module.MovieReview
 })))
