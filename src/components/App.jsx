@@ -2,7 +2,7 @@ import { Route, Routes } from 'react-router-dom';
 // import { lazy } from 'react';
 import Home from 'pages/Home/Home';
 import { Movies } from 'pages/Movies/Movies';
-import { MovieDetails } from './MovieDetails/MovieDetails';
+import { MovieDetails } from '../pages/MovieDetails/MovieDetails';
 import { Layout } from './Layout/Layout';
 import { MovieCast } from './MovieCast/MovieCast';
 import { MovieReview } from './MovieReview/MovieReview';
