@@ -1,9 +1,4 @@
-import { Header, Nav, NavItemLink, NavList, Container } from './NavBar.styled';
-
-const navItems = [
-  { href: '/', text: 'Home' },
-  { href: '/movies', text: 'Movies' },
-];
+import { Container, Header, Nav, NavItemLink, NavList } from './NavBar.styled';
 
 export const NavBar = () => {
   return (
@@ -11,11 +6,12 @@ export const NavBar = () => {
       <Container>
         <Nav>
           <NavList>
-            {navItems.map(({ href, text }) => (
-              <li key={href}>
-                <NavItemLink to={href}>{text}</NavItemLink>
-              </li>
-            ))}
+            <li>
+              <NavItemLink to="/">HOME</NavItemLink>
+            </li>
+            <li>
+              <NavItemLink to="/movies">MOVIES</NavItemLink>
+            </li>
           </NavList>
         </Nav>
       </Container>
