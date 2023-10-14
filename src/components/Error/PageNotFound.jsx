@@ -3,3 +3,5 @@ export const PageNotFound = () => {
         <div>Oops, try again later...</div>
     )
 }
+
+export default PageNotFound

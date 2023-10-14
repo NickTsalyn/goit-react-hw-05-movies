@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import {BsFileImage} from 'react-icons'
 import { Link } from 'react-router-dom';
 
 export const MovieListStyle = styled.ul`
@@ -57,3 +58,14 @@ export const MovieName = styled.p`
      font-size: 18px
   }
 `;
+
+export const ImageTemplate = styled(BsFileImage)`
+  width: 100%;
+  height: 100%;
+`;
+
+export const Wrapper = styled.div`
+margin: 0 auto;
+display: flex;
+flex-wrap: wrap;
+`

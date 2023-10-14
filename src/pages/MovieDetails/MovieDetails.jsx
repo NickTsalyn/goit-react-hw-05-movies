@@ -14,7 +14,7 @@ export const MovieDetails = () => {
   }, [movieId]);
 
   if (!movieDetails) {
-    return null;
+    return 
   }
 
   const backLink = location.state?.from ?? '/';
@@ -38,3 +38,6 @@ export const MovieDetails = () => {
     </>
   );
 };
+
+
+export default MovieDetails

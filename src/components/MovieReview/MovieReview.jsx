@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 
 import { getMovieRatings } from 'api';
 import { Author, Item, List, Text } from './MovieReview.styled';
-import { NoReview } from 'Error/NoReview';
+import { NoReview } from 'components/Error/NoReview';
 
 export const MovieReview = () => {
   const [review, setReview] = useState(null);
@@ -29,3 +29,6 @@ export const MovieReview = () => {
     </List>
   );
 };
+
+
+export default MovieReview

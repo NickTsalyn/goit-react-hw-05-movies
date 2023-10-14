@@ -3,7 +3,8 @@ import { useParams } from 'react-router-dom';
 
 import { getMovieCredits } from 'api';
 import { Character, Img, Item, List, Name } from './MovieCast.styled';
-import { NoCast } from 'Error/NoCast';
+import { NoCast } from 'components/Error/NoCast';
+import { ImageTemplate } from 'components/MovieList/MovieList.styled';
 
 export const MovieCast = () => {
   const [movieCast, setMovieCast] = useState(null);
@@ -14,16 +15,21 @@ export const MovieCast = () => {
     getMovieCredits(movieId).then(setMovieCast);
   }, [movieId]);
 
-  if(!movieCast) {
-    return
+  if (!movieCast) {
+    return;
   }
 
   return (
     <List>
-        {movieCast.length === 0 && <NoCast/>}
+      {movieCast.length === 0 && <NoCast />}
       {movieCast.map(({ id, profile_path, name, character }) => (
         <Item key={id}>
-          <Img src={imgBaseUrl.concat(profile_path)} alt="" />
+          {profile_path ? (
+            <Img src={imgBaseUrl.concat(profile_path)} alt="" />
+          ) : (
+            <ImageTemplate />
+          )}
+
           <div>
             <Name>{name}</Name>
             <Character>Character: {character}</Character>
@@ -33,3 +39,5 @@ export const MovieCast = () => {
     </List>
   );
 };
+
+export default MovieCast;
