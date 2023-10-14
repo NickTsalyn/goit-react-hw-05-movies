@@ -7,13 +7,13 @@ export const Layout = () => {
   return (
     <>
     <NavBar/>
-      <main>
+      {/* <main> */}
         <Container>
           <Suspense fallback={null}>
             <Outlet />
           </Suspense>
         </Container>
-      </main>
+      {/* </main> */}
     </>
   );
 };

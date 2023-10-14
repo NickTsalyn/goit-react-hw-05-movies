@@ -32,7 +32,7 @@ export const MovieDetails = () => {
         </AddInfo>
       </Container>
 
-      <Suspense>
+      <Suspense fallback={null}>
         <Outlet />
       </Suspense>
     </>

@@ -6,7 +6,7 @@ import { Title } from "./Home.styled";
 
 
 
-export default function Home() {
+export const Home = () => {
     const [movies, setMovies] = useState([])
 
     useEffect(() => {
@@ -20,3 +20,7 @@ export default function Home() {
         </div>
     )
 } 
+
+
+
+export default Home

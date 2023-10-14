@@ -1,6 +1,7 @@
-import styled from '@emotion/styled';
-import {BsFileImage} from 'react-icons'
 import { Link } from 'react-router-dom';
+import styled from '@emotion/styled';
+
+import { BsFileImage } from 'react-icons/bs'
 
 export const MovieListStyle = styled.ul`
   margin-bottom: 40px;
@@ -27,7 +28,7 @@ export const MovieLink = styled(Link)`
   object-fit: cover;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   height: 100%;
 
   &:hover img {
@@ -47,7 +48,7 @@ export const MovieImg = styled.img`
 `;
 
 export const MovieName = styled.p`
-  height: 100%;
+  height: auto;
   padding: 10px 8px;
   font-weight: 500;
   margin: 0;
