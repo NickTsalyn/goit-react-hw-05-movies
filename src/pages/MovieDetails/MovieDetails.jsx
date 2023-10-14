@@ -3,6 +3,8 @@ import { useState, useEffect, Suspense } from 'react';
 import { getMovieDetails } from 'api';
 import { MovieCard } from 'components/MovieCard/MovieCard';
 import { AddInfo, BackLink, Container } from './MovieDetails.styled';
+// import PageNotFound from 'components/Error/PageNotFound';
+
 
 export const MovieDetails = () => {
   const [movieDetails, setMovieDetails] = useState(null);
@@ -10,12 +12,15 @@ export const MovieDetails = () => {
   const location = useLocation();
 
   useEffect(() => {
-    getMovieDetails(movieId).then(setMovieDetails);
+    getMovieDetails(movieId)
+      .then(setMovieDetails)
   }, [movieId]);
 
-  if (!movieDetails) {
-    return 
+  if(!movieDetails) {
+    return null;
   }
+
+
 
   const backLink = location.state?.from ?? '/';
 
@@ -39,5 +44,4 @@ export const MovieDetails = () => {
   );
 };
 
-
-export default MovieDetails
+export default MovieDetails;

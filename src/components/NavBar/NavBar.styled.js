@@ -4,6 +4,7 @@ import { NavLink } from 'react-router-dom';
 export const Header = styled.header`
   background-color: var(--bg);
   box-shadow: var(--main-shadow);
+  
 `;
 
 export const Container = styled.div`
@@ -20,7 +21,6 @@ export const Container = styled.div`
 `;
 
 export const Nav = styled.nav`
-  margin-bottom: 20px;
   padding: 30px 0;
   max-width: 100%;
 `;

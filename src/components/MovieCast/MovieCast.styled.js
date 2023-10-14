@@ -1,7 +1,8 @@
 import styled from '@emotion/styled';
+import { BsFileImage } from 'react-icons/bs';
+
 
 export const List = styled.ul`
-  margin-top: 30px;
   display: flex;
   flex-wrap: wrap;
   gap: 30px 10px;
@@ -24,4 +25,11 @@ export const Name = styled.p`
 
 export const Character = styled.p`
   color: var(--accent);
+`;
+
+export const ImageTemplate = styled(BsFileImage)`
+  width: 150px;
+  height: 230px;
+  background-color: #e3c0dd85;
+  ;
 `;

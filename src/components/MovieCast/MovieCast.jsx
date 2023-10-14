@@ -2,9 +2,9 @@ import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 
 import { getMovieCredits } from 'api';
-import { Character, Img, Item, List, Name } from './MovieCast.styled';
+import { Character, ImageTemplate, Img, Item, List, Name } from './MovieCast.styled';
 import { NoCast } from 'components/Error/NoCast';
-import { ImageTemplate } from 'components/MovieList/MovieList.styled';
+
 
 export const MovieCast = () => {
   const [movieCast, setMovieCast] = useState(null);

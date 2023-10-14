@@ -42,3 +42,8 @@ a {
   --main-shadow: -2px -2px 5px #ffffff, 3px 3px 5px rgba(0, 0, 0, 0.1);
   --inset-shadow: inset -2px -2px 5px #ffffff, inset 3px 3px 5px rgba(0, 0, 0, 0.1);
 }
+
+.message {
+  margin: 0 auto;
+  font-size: 30px;
+}
