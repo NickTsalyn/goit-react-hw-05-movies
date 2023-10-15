@@ -1,19 +1,24 @@
 import { Route, Routes } from 'react-router-dom';
 import { lazy } from 'react';
-import Home from 'pages/Home/Home';
-// import { Movies } from 'pages/Movies/Movies';
-import { MovieDetails } from 'pages/MovieDetails/MovieDetails';
+
 import { Layout } from './Layout/Layout';
+// import Home from 'pages/Home/Home';
+// import { Movies } from 'pages/Movies/Movies';
+// import { MovieDetails } from 'pages/MovieDetails/MovieDetails';
 // import { MovieCast } from './MovieCast/MovieCast';
 // import { MovieReview } from './MovieReview/MovieReview';
 // import { NavBar } from './NavBar/NavBar';
-import { PageNotFound } from 'components/Error/PageNotFound';
+// import { PageNotFound } from 'components/Error/PageNotFound';
 
 const Movies = lazy(() => import('../pages/Movies/Movies'));
 
 const MovieCast = lazy(() => import('./MovieCast/MovieCast'));
 
 const MovieReview = lazy(() => import('./MovieReview/MovieReview'));
+
+const Home = lazy(() => import('../pages/Home/Home'))
+
+const MovieDetails = lazy(() => import('../pages/MovieDetails/MovieDetails'))
 
 export const App = () => {
   return (
@@ -27,7 +32,7 @@ export const App = () => {
             <Route path="reviews" element={<MovieReview />} />
           </Route>
         </Route>
-          <Route path="*" element={<PageNotFound />}></Route>
+          <Route path="*" element={<Layout />}/>
       </Routes>
     </>
 
