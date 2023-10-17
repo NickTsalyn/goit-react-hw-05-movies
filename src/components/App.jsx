@@ -2,13 +2,7 @@ import { Navigate, Route, Routes } from 'react-router-dom';
 import { lazy } from 'react';
 
 import { Layout } from './Layout/Layout';
-// import Home from 'pages/Home/Home';
-// import { Movies } from 'pages/Movies/Movies';
-// import { MovieDetails } from 'pages/MovieDetails/MovieDetails';
-// import { MovieCast } from './MovieCast/MovieCast';
-// import { MovieReview } from './MovieReview/MovieReview';
-// import { NavBar } from './NavBar/NavBar';
-// import { PageNotFound } from 'components/Error/PageNotFound';
+
 
 const Movies = lazy(() => import('../pages/Movies/Movies'));
 
